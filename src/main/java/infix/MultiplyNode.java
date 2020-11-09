@@ -24,8 +24,8 @@ public class MultiplyNode extends Node {
 	 * @return the product of the left and right subtrees
 	 */
 	public BigDecimal evaluate() {
-		// TODO: Implement this method
-		return new BigDecimal(0);
+		return super.getChild(0).evaluate()
+				.multiply(super.getChild(1).evaluate());
 	}
 
 	/**
